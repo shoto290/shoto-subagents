@@ -1,0 +1,10 @@
+{
+  "name": "orchestrator",
+  "description": "Runtime foundation for the shoto-orchestrator marketplace: the orchestrator agent and its generalist fallback writer, plus the base, alignment, and orchestrator skills they run on.",
+  "version": "0.16.0",
+  "author": {
+    "name": "shoto290"
+  },
+  "homepage": "https://github.com/shoto290/shoto-orchestrator",
+  "repository": "https://github.com/shoto290/shoto-orchestrator"
+}

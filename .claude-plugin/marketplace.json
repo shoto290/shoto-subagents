@@ -1,0 +1,40 @@
+{
+  "name": "shoto-orchestrator",
+  "owner": {
+    "name": "shoto290"
+  },
+  "plugins": [
+    {
+      "name": "orchestrator",
+      "source": "./plugins/orchestrator"
+    },
+    {
+      "name": "workflow",
+      "source": "./plugins/workflow"
+    },
+    {
+      "name": "design-engineer",
+      "source": "./plugins/design-engineer"
+    },
+    {
+      "name": "engineering",
+      "source": "./plugins/engineering"
+    },
+    {
+      "name": "designer",
+      "source": "./plugins/designer"
+    },
+    {
+      "name": "backend-engineer",
+      "source": "./plugins/backend-engineer"
+    },
+    {
+      "name": "inventory",
+      "source": "./plugins/inventory"
+    },
+    {
+      "name": "explore",
+      "source": "./plugins/explore"
+    }
+  ]
+}
