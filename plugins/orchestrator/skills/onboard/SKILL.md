@@ -11,7 +11,7 @@ allowed-tools: [AskUserQuestion, Read, Glob, Bash, Agent]
 `onboard` runs **two independent flows**. **Flow A** sets up a **committed project orchestrator**: a short PROJECT interview (stack + conventions) produces a thin-wrapper agent under `.claude/agents/` that **inherits** the live `orchestrator:orchestrator` contract verbatim plus an injected `## Project profile` block; each teammate opts in locally by setting `"agent": "<name>"` in the gitignored `.claude/settings.local.json`. **Flow B** is optional and per-user: if the user wants to personalize for themselves, the SAME 3-round personal interview produces a user-scope `operator-profile` skill written to `~/.claude/skills/` — outside the repo, never committed, preloaded into orchestrators by name. The skill never writes files itself — it delegates every write and commit to a `orchestrator:generalist` subagent. On re-run, if an orchestrator already exists, the very first question is **Keep as-is vs Reconfigure**.
 
 ```
-/workflow:onboard
+/orchestrator:onboard
  ├─ parse flags (--show)
  ├─ locate LIVE orchestrator:orchestrator (source of truth)           [§2 unchanged]
  ├─ FLOW A — PROJECT orchestrator (committed)
@@ -149,7 +149,7 @@ Produced **only** when §6 ran with personalize=**yes** AND the user chose **Rec
 ---
 name: operator-profile
 description: "The operator's personal working profile — role, seniority, stack, tone, language, and output preferences. Preloaded into orchestrators to shape HOW Claude communicates and decides for this user."
-when_to_use: "Auto-loaded as background context whenever an orchestrator runs; not a manual command. Re-run /workflow:onboard and choose to personalize to (re)generate it."
+when_to_use: "Auto-loaded as background context whenever an orchestrator runs; not a manual command. Re-run /orchestrator:onboard and choose to personalize to (re)generate it."
 user-invocable: false
 ---
 
@@ -195,7 +195,7 @@ Summarize:
 - the `.gitignore` touch, if any,
 - the commit result, if any.
 
-Flag that a Claude Code **restart is required** for the new default agent (and a freshly created `operator-profile` skill) to take effect, and that `/reload-plugins` (or a restart) was needed for `/workflow:onboard` itself to appear. Note that **teammates opt in** by re-running `/workflow:onboard` and choosing **Keep as-is**.
+Flag that a Claude Code **restart is required** for the new default agent (and a freshly created `operator-profile` skill) to take effect, and that `/reload-plugins` (or a restart) was needed for `/orchestrator:onboard` itself to appear. Note that **teammates opt in** by re-running `/orchestrator:onboard` and choosing **Keep as-is**.
 
 ## Critical principles
 
