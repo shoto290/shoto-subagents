@@ -23,6 +23,25 @@ Install whichever specialists you need, plus `engineering` for the shared craft 
 | [`backend-engineer`](./plugins/backend-engineer) | 1 agent · 7 skills | Server-side specialist for designing APIs, modeling data, and building secure, observable, resilient services. |
 | [`engineering`](./plugins/engineering) | 8 skills | Senior-developer craft skills (senior-mindset, clean-code, SOLID/DRY/KISS/YAGNI, reuse-first, avoid-over-engineering, pragmatic-principles, scalable-architecture, secure-by-default) that the three specialist agents preload by default. |
 
+## Agent colors
+
+Every agent declares a `color:` in its frontmatter. It encodes **what the agent does and where its output lands** — not its domain. The domain is already in the agent's name.
+
+The scale runs cold to warm by irreversibility: cold means nothing changes, warm means you cannot undo it.
+
+| Color | Action | Output lands in | Reversible |
+| :--- | :--- | :--- | :--- |
+| 🩵 cyan | Reads — analyzes, audits, reports | the conversation | nothing to undo |
+| 🔵 blue | Orchestrates — drives other agents | other agents | nothing to undo |
+| 🟣 purple | Produces non-executable artifacts — design, docs, specs | non-code files, Figma | trivial |
+| 🟢 green | Writes code | repo sources | `git checkout` |
+| 🟠 orange | Mutates shared state — commits, branches, PRs, CI | history, teammates | painful |
+| 🔴 red | Acts outside the repo — deploy, prod, databases, third-party APIs | the real world | no |
+
+Today: `designer` is purple, `design-engineer` and `backend-engineer` are green. Two agents sharing a color is expected — same action, different domain.
+
+`pink` and `yellow` are unassigned. A new agent takes the color of its action.
+
 ## Repo layout
 
 ```
