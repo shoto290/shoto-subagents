@@ -2,7 +2,7 @@
 
 All AI agents working in this repo must follow these instructions.
 
-This repo is the **shoto-orchestrator** Claude Code marketplace hosting one or more plugins under `plugins/`. It contains markdown artifacts only — no runtime, no build step.
+This repo is the **shoto-subagents** Claude Code marketplace hosting one or more plugins under `plugins/`. Each plugin ships one ultra-specialized subagent, plus the shared craft skills those agents preload. It contains markdown artifacts only — no runtime, no build step.
 
 - `plugins/<plugin>/skills/<name>/SKILL.md` — skill definitions (+ supporting files)
 - `plugins/<plugin>/agents/<name>.md` — sub-agent definitions (frontmatter + body)
@@ -88,8 +88,6 @@ This repo exists to build skills, sub-agents, and hooks for Claude Code. **Use t
 | Hook (`.claude/hooks/*`) | `/core:hooks` skill or the `core:hooks-smith` sub-agent |
 | MCP server | `/core:mcp` skill or the `core:mcp-smith` sub-agent |
 | Plugin shell (`.claude-plugin/plugin.json`) | `/core:plugin` skill or the `core:plugin-smith` sub-agent |
-| Workflow (`*.workflow.js`) | `/core:workflow` skill or the `core:workflow-smith` sub-agent |
-| Coordinated multi-artifact change | `/workflow:evolve` (plans across skill / sub-agent / hook / MCP) |
 
 The authors own frontmatter, scope selection, and the validation gate. Don't bypass them when scaffolding new artifacts.
 
