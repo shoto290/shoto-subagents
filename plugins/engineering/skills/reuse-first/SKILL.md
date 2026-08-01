@@ -45,7 +45,7 @@ The wrapper reuses `Button` and adds intent, rather than subclassing a base butt
 
 ## Design-system reuse
 
-Reach for existing tokens and components before anything bespoke. Use the design system's spacing, color, and typography primitives instead of hardcoded values, and its components instead of one-off markup. For how to build, extend, and theme those primitives, defer to `design-engineer:design-systems` — do not restate its guidance here.
+Reach for existing tokens and components before anything bespoke. Use the design system's spacing, color, and typography primitives instead of hardcoded values, and its components instead of one-off markup.
 
 ## Pass/fail checklist
 

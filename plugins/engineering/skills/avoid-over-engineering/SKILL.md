@@ -5,7 +5,7 @@ description: Write less code; resist premature abstraction and optimization.
 
 # Avoid Over-Engineering
 
-The simplest solution that solves the problem wins. SIMPLE — **S**imple, **I**ntentional, **P**ragmatic — and AGENTS.md Simplicity First both say the same thing: minimum content that solves the problem, nothing speculative. This skill is the concrete checklist for resisting the urge to add.
+The simplest solution that solves the problem wins: minimum content that solves the problem, nothing speculative. This skill is the concrete checklist for resisting the urge to add.
 
 ## Write less code
 
@@ -13,11 +13,10 @@ The senior paradox: seniority is measured by the code you remove and the problem
 
 - Before adding, ask: can an existing function do this? (reuse over duplication)
 - Before keeping, ask: does anything still call this? If not, delete it.
-- Self-check from Simplicity First: "Would a senior engineer say this is overcomplicated?"
 
 ## Rule of Three
 
-Do not abstract until the **third** real occurrence. Two similar blocks are a coincidence; three is a pattern. Premature DRY guesses the shape of the abstraction before you know it, and the wrong abstraction is more expensive than duplication. See `solid-dry-kiss-yagni` for the full DRY/YAGNI treatment — this is the trigger rule.
+Do not abstract until the **third** real occurrence. Two similar blocks are a coincidence; three is a pattern. Premature DRY guesses the shape of the abstraction before you know it, and the wrong abstraction is more expensive than duplication. This is the trigger rule; `engineering:solid-dry-kiss-yagni` carries the DRY and YAGNI principles behind it.
 
 ```ts
 // Two callers: leave them. Inlining is honest.
