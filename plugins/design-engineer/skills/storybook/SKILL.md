@@ -72,4 +72,4 @@ When a Storybook MCP server is configured, exploit it — do not hand-author bli
 
 **Detect, then degrade gracefully.** Check whether the Storybook MCP is present and use it when it is; when it is absent, author stories normally from the source — never block on it.
 
-**Setup is out of scope.** Configuring or installing the Storybook MCP server is deferred — route the user to the `orchestrator:mcp` skill (`Skill({ skill: "orchestrator:mcp" })`). This skill only documents how to USE the MCP once it exists.
+**Setup is out of scope.** Configuring or installing the Storybook MCP server is the user's responsibility — say so and proceed. This skill only documents how to USE the MCP once it exists.

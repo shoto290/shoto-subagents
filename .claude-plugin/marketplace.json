@@ -1,13 +1,9 @@
 {
-  "name": "shoto-orchestrator",
+  "name": "shoto-subagents",
   "owner": {
     "name": "shoto290"
   },
   "plugins": [
-    {
-      "name": "orchestrator",
-      "source": "./plugins/orchestrator"
-    },
     {
       "name": "design-engineer",
       "source": "./plugins/design-engineer"
@@ -23,14 +19,6 @@
     {
       "name": "backend-engineer",
       "source": "./plugins/backend-engineer"
-    },
-    {
-      "name": "inventory",
-      "source": "./plugins/inventory"
-    },
-    {
-      "name": "explore",
-      "source": "./plugins/explore"
     }
   ]
 }

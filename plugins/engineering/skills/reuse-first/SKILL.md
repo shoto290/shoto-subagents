@@ -19,7 +19,7 @@ Look before you build:
 - Scan the design system and shared utility modules for an existing primitive.
 - Check sibling modules and adjacent features for a pattern already solving this.
 
-When unsure what already exists, run `inventory:inventory-components` to score existing candidates for fit, and `inventory:inventory-conventions` to match house style before adding anything.
+When unsure what already exists, grep and glob the codebase to score existing candidates for fit, and read the surrounding modules to match house style before adding anything.
 
 ## Reuse / Extend / New decision
 
@@ -50,7 +50,7 @@ Reach for existing tokens and components before anything bespoke. Use the design
 ## Pass/fail checklist
 
 - [ ] Searched (grep/glob, design system, shared utils, sibling modules) before writing new code.
-- [ ] Ran `inventory:inventory-components` / `inventory:inventory-conventions` when existing coverage was unclear.
+- [ ] Scored existing candidates and read the surrounding modules for house style when existing coverage was unclear.
 - [ ] Chose the lightest fit: REUSE over EXTEND over NEW.
 - [ ] Any NEW unit carries a one-line justification for why nothing existing fit.
 - [ ] Composed small units instead of adding inheritance depth.

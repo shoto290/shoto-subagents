@@ -85,7 +85,7 @@ Key tools to use when present:
 
 **Detect, then degrade gracefully.** If neither MCP server is connected, say so plainly and proceed from the shared file links or screenshots the user provides — do not block on the MCP.
 
-**Setup is out of scope.** Installing or configuring the MCP servers is deferred — route the user to the `orchestrator:mcp` skill (`Skill({ skill: "orchestrator:mcp" })`). This skill documents how to USE the servers once they exist.
+**Setup is out of scope.** Installing or configuring the MCP servers is the user's responsibility — say so and proceed. This skill documents how to USE the servers once they exist.
 
 ## Handoff Hooks
 
