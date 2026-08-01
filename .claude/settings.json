@@ -14,7 +14,13 @@
 			"Read(./.env.*)",
 			"Read(./secrets/**)",
 			"Write(./.env*)",
-			"Write(./secrets/**)"
+			"Write(./secrets/**)",
+			"Bash(git branch -D*)",
+			"Bash(git clean -fd*)",
+			"Bash(git checkout .*)",
+			"Read(./**/*.pem)",
+			"Read(./**/*.key)",
+			"Read(./**/*.cert)"
 		]
 	},
 	"hooks": {
