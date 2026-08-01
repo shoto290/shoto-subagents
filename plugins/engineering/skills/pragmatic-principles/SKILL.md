@@ -5,7 +5,7 @@ description: Pragmatic Programmer principles - orthogonality, tracer bullets, DR
 
 # Pragmatic Principles
 
-Working habits from The Pragmatic Programmer, scoped to decisions about module boundaries, how to start risky work, and when to stop polishing. The SOLID/DRY/KISS/YAGNI rule set lives in `engineering:solid-dry-kiss-yagni`, broader system shape in `engineering:scalable-architecture`.
+Working habits from The Pragmatic Programmer, scoped to decisions about module boundaries, how to start risky work, and when to stop polishing. The SOLID/DRY/KISS/YAGNI rule set lives in `engineering:solid-dry-kiss-yagni`, broader system shape in `engineering:scalable-architecture` — read them there if your agent preloads them.
 
 ## Orthogonality
 
@@ -29,7 +29,7 @@ Talk to your immediate collaborators, not their internals.
 - Do: accept an abstraction and let the caller supply the implementation.
 - Don't: chain through objects you were merely handed (`a.getB().getC().run()`).
 
-This skill covers the day-to-day reflex; `engineering:scalable-architecture` covers where interface boundaries belong, and `engineering:solid-dry-kiss-yagni` (DIP) the rationale.
+This skill covers the day-to-day reflex; where interface boundaries belong is covered by `engineering:scalable-architecture`, and the dependency-inversion rationale by `engineering:solid-dry-kiss-yagni`, when your agent preloads them.
 
 ## DRY as Knowledge
 
