@@ -35,7 +35,7 @@ class Notifier { constructor(private channel: Channel) {} }
 
 ## DRY
 
-DRY is about a single source of truth for **knowledge**, not about deleting code that merely looks alike. Two functions with the same shape but different reasons to change are coincidental duplication — collapsing them couples unrelated concepts. Extract only when the same decision lives in two places and must always move together. Before extracting from a third occurrence, apply the Rule of Three (see the `avoid-over-engineering` skill).
+DRY is about a single source of truth for **knowledge**, not about deleting code that merely looks alike. Two functions with the same shape but different reasons to change are coincidental duplication — collapsing them couples unrelated concepts. Extract only when the same decision lives in two places and must always move together. For the duplication threshold that gates extraction, see the Rule of Three in `engineering:avoid-over-engineering`.
 
 ## KISS
 
@@ -49,13 +49,7 @@ This embodies the **S** in SIMPLE: less code, fewer abstractions, no machinery t
 
 ## YAGNI
 
-Build for today's requirement, not an imagined one. Every speculative parameter, feature flag, or config knob is code you maintain, test, and explain for a caller that may never arrive. Delete the `options` bag with one real field; add the second field when a second caller exists.
-
-```ts
-function exportCsv(rows: Row[]) {}
-```
-
-Not `exportCsv(rows, { delimiter = ",", encoding = "utf8", async = false } = {})` until something actually passes those.
+Build for today's requirement, not an imagined one. Every speculative parameter, feature flag, or config knob is code you maintain, test, and explain for a caller that may never arrive — `engineering:avoid-over-engineering` carries the before/after example.
 
 ## When they conflict
 
@@ -69,6 +63,6 @@ DRY and KISS pull against each other. Premature DRY is the more expensive mistak
 - **ISP** — Does each consumer depend only on the methods it calls?
 - **DIP** — Do high-level modules depend on interfaces, not concrete classes?
 - **DRY** — Is each piece of knowledge expressed in exactly one place?
-- **KISS** — Would a senior engineer call this the obvious solution, not the clever one?
+- **KISS** — Does this read correctly on a first pass, with no cleverness that needs decoding?
 - **YAGNI** — Does every parameter, flag, and branch serve a requirement that exists today?
 - **Abstraction** — Did I add an abstraction without a second real caller?

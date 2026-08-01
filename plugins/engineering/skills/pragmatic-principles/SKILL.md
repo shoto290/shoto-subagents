@@ -5,7 +5,7 @@ description: Pragmatic Programmer principles - orthogonality, tracer bullets, DR
 
 # Pragmatic Principles
 
-Working habits from The Pragmatic Programmer, scoped to decisions about module boundaries, how to start risky work, and when to stop polishing. For the SOLID/DRY/KISS/YAGNI rule set and broader system shape, defer to `solid-dry-kiss-yagni` and `scalable-architecture` rather than restating them here.
+Working habits from The Pragmatic Programmer, scoped to decisions about module boundaries, how to start risky work, and when to stop polishing. The SOLID/DRY/KISS/YAGNI rule set lives in `engineering:solid-dry-kiss-yagni`, broader system shape in `engineering:scalable-architecture` — read them there if your agent preloads them.
 
 ## Orthogonality
 
@@ -24,19 +24,19 @@ function buildReport(rows: Row[]) { return summarize(rows); }
 
 ## Decoupling
 
-Talk to your immediate collaborators, not their internals, and depend on interfaces rather than concrete types.
+Talk to your immediate collaborators, not their internals.
 
 - Do: accept an abstraction and let the caller supply the implementation.
 - Don't: chain through objects you were merely handed (`a.getB().getC().run()`).
 
-For the dependency-inversion rationale behind "depend on interfaces", see `solid-dry-kiss-yagni` (DIP); this skill only covers the day-to-day reflex.
+This skill covers the day-to-day reflex; where interface boundaries belong is covered by `engineering:scalable-architecture`, and the dependency-inversion rationale by `engineering:solid-dry-kiss-yagni`, when your agent preloads them.
 
 ## DRY as Knowledge
 
 Every piece of knowledge has a single, authoritative representation. DRY is about duplicated knowledge, not duplicated text — two lines that look alike but encode different decisions are not a violation.
 
 - Do: give each business rule, constant, or schema exactly one home.
-- Don't: collapse code that merely looks similar today; for the duplication threshold, apply the Rule of Three from `avoid-over-engineering` as the counterweight.
+- Don't: collapse code that merely looks similar today — the Rule of Three in `engineering:avoid-over-engineering` is the counterweight.
 
 ## Tracer Bullets
 
@@ -47,15 +47,15 @@ Build a thin slice that runs end-to-end — real wiring, real boundaries — the
 
 ## Good-Enough Software
 
-Ship at the quality bar the context demands. "Good enough" is a deliberate, negotiated target, not an excuse for sloppiness — and perfect is the enemy of done (SIMPLE: Pragmatic).
+Ship at the quality bar the context demands. "Good enough" is a deliberate, negotiated target, not an excuse for sloppiness.
 
 - Do: agree on the acceptable bar with stakeholders, hit it, and release.
 - Don't: gold-plate past the point where added polish stops earning its cost.
 
-## Pass/Fail Checklist
+## Pass/fail checklist
 
 - [ ] Changing one module leaves unrelated modules untouched.
-- [ ] Code depends on interfaces, not concrete collaborators' internals.
+- [ ] Code talks to its immediate collaborators, not their internals.
 - [ ] Each piece of knowledge has exactly one authoritative source.
 - [ ] Risky features start as a thin end-to-end slice, not a deep partial one.
 - [ ] The quality bar was set against the context, not maxed by reflex.

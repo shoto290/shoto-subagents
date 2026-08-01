@@ -12,7 +12,7 @@ Everything here is markdown and JSON artifacts: no runtime, no build step.
 /plugin install <plugin>@shoto-subagents
 ```
 
-Install whichever specialists you need, plus `engineering` for the shared craft skills.
+`engineering` is **required** — every specialist agent preloads its skills, and each specialist plugin declares it as a dependency, so it installs automatically. Install whichever specialists you need.
 
 ## Plugins
 

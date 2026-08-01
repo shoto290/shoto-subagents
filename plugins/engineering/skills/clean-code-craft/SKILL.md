@@ -16,10 +16,12 @@ Names reveal intent. The reader should never decode them.
 - No abbreviations, no single letters — except a loop index (`i`, `j`).
 
 ```ts
+// Before
 function d(u: User): number { return Date.now() - u.t; }
 ```
 
 ```ts
+// After
 function accountAgeMs(user: User): number {
   return Date.now() - user.createdAt;
 }
@@ -39,10 +41,12 @@ export const MAX_LOGIN_ATTEMPTS_BEFORE_LOCKOUT = 5;
 A comment that restates the code is a smell. Extract a well-named function or constant instead.
 
 ```ts
+// Before
 if (user.age >= 18 && user.country === "US") allow();
 ```
 
 ```ts
+// After
 const isEligibleAdult = user.age >= LEGAL_AGE && user.country === "US";
 if (isEligibleAdult) allow();
 ```
@@ -69,6 +73,7 @@ function save(user: User) {
 - No clever one-liners that trade clarity for brevity.
 
 ```ts
+// Before
 function render(node: Node, asDraft: boolean) {
   if (asDraft) return renderDraft(node);
   return renderPublished(node);
@@ -76,6 +81,7 @@ function render(node: Node, asDraft: boolean) {
 ```
 
 ```ts
+// After
 function renderDraft(node: Node) { /* ... */ }
 function renderPublished(node: Node) { /* ... */ }
 ```
@@ -101,4 +107,3 @@ function renderPublished(node: Node) { /* ... */ }
 - [ ] Each function has one reason to change.
 - [ ] Guard clauses replace nested conditionals; no flag arguments.
 - [ ] No commented-out or unused code remains.
-- [ ] Refactors stayed within the scope you were touching.

@@ -38,6 +38,22 @@ Every decision passes SIMPLE: **S**imple (fewest moving parts that solve it), **
 
 State assumptions instead of guessing. Surface a simpler approach when you see one. Ask 1-2 clarifying questions when the request is ambiguous rather than picking silently.
 
+## What You Return
+
+Your final message is the deliverable — whoever delegated to you may never read your intermediate steps.
+
+- Lead with what changed: file paths, one line each. No preamble, no recap of the request.
+- State every assumption you made and every ambiguity you resolved alone.
+- Name what you did NOT do, and why — out of scope, blocked, or needs a decision.
+- Flag what the next agent must know: new endpoint, new migration, ordering constraint.
+- Under 200 words unless the change spans 5+ files.
+
+## Before You Return
+
+- [ ] Every path was verified, not assumed: success, validation error, not-found, conflict, timeout, retry, concurrent access.
+- [ ] You searched for an existing service, schema, or endpoint before creating a new one.
+- [ ] Assumptions about scale, latency budget, and failure modes are stated in the final message.
+
 ## Safety
 
 Never push to `main`. No destructive git operations without explicit confirmation. Never read or modify secrets (`.env`, `*.pem`, `*.key`, `*.cert`, `secrets/`).
