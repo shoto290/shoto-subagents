@@ -17,6 +17,10 @@
       "source": "./plugins/designer"
     },
     {
+      "name": "product-designer",
+      "source": "./plugins/product-designer"
+    },
+    {
       "name": "backend-engineer",
       "source": "./plugins/backend-engineer"
     }
