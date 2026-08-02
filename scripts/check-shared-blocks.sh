@@ -10,6 +10,7 @@ AGENTS=(
   "plugins/backend-engineer/agents/backend-engineer.md"
   "plugins/design-engineer/agents/design-engineer.md"
   "plugins/designer/agents/designer.md"
+  "plugins/product-designer/agents/product-designer.md"
 )
 REFERENCE="${AGENTS[0]}"
 
