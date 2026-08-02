@@ -18,7 +18,8 @@ Everything here is markdown and JSON artifacts: no runtime, no build step.
 
 | Plugin | Ships | Description |
 | :--- | :--- | :--- |
-| [`designer`](./plugins/designer) | 1 agent · 7 skills | Product/UI design specialist for design systems, Figma and Paper.design canvases, typography, accessibility, and design-to-dev handoff. |
+| [`product-designer`](./plugins/product-designer) | 1 agent · 7 skills | Discovery and definition specialist for user research, jobs-to-be-done, personas and journey maps, information architecture, prototyping and usability testing, UX writing, and outcome metrics. |
+| [`designer`](./plugins/designer) | 1 agent · 7 skills | Product/UI design specialist for design systems, Figma and Paper.design canvases, typography, accessibility, and design-to-dev handoff. Sits downstream of product-designer. |
 | [`design-engineer`](./plugins/design-engineer) | 1 agent · 7 skills | Front-end specialist (React + TypeScript) for building, using, and refactoring design systems. |
 | [`backend-engineer`](./plugins/backend-engineer) | 1 agent · 7 skills | Server-side specialist for designing APIs, modeling data, and building secure, observable, resilient services. |
 | [`engineering`](./plugins/engineering) | 8 skills | Senior-developer craft skills (senior-mindset, clean-code, SOLID/DRY/KISS/YAGNI, reuse-first, avoid-over-engineering, pragmatic-principles, scalable-architecture, secure-by-default) that the three specialist agents preload by default. |
@@ -38,7 +39,7 @@ The scale runs cold to warm by irreversibility: cold means nothing changes, warm
 | 🟠 orange | Mutates shared state — commits, branches, PRs, CI | history, teammates | painful |
 | 🔴 red | Acts outside the repo — deploy, prod, databases, third-party APIs | the real world | no |
 
-Today: `designer` is purple, `design-engineer` and `backend-engineer` are green. Two agents sharing a color is expected — same action, different domain.
+Today: `product-designer` and `designer` are purple, `design-engineer` and `backend-engineer` are green. Two agents sharing a color is expected — same action, different domain.
 
 `pink` and `yellow` are unassigned. A new agent takes the color of its action.
 
