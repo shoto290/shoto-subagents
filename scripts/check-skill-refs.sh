@@ -6,8 +6,8 @@ ROOT=$(git rev-parse --show-toplevel 2>/dev/null || true)
 cd "$ROOT"
 
 KEBAB='^[a-z0-9]+(-[a-z0-9]+)*$'
-CONSUMERS="backend-engineer: design-engineer: designer:"
-CROSS_REF='(engineering|designer|design-engineer|backend-engineer):[a-z-]+'
+CONSUMERS="backend-engineer: design-engineer: designer: frontend-engineer:"
+CROSS_REF='(engineering|designer|design-engineer|backend-engineer|frontend-engineer):[a-z-]+'
 
 FAILED=0
 NOTE_COUNT=0

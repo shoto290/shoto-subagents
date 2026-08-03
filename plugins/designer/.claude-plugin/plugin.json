@@ -1,7 +1,7 @@
 {
   "name": "designer",
   "description": "Design plugin — ships the designer subagent: a product/UI design specialist that is ULTRA-effective at design systems, Figma and Paper.design canvases, typography, accessibility, and design-to-dev handoff. Bundles seven skills (design-foundations, design-systems-craft, figma-craft, paper-craft, accessibility-craft, design-handoff, ux-principles) and exploits the Figma and Paper.design MCP servers. Requires the engineering plugin from the same marketplace — the agent preloads its craft skills. Pairs with the product-designer plugin, which owns the upstream discovery and definition stage.",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "dependencies": ["engineering"],
   "mcpServers": "./.mcp.json",
   "author": { "name": "shoto290", "url": "https://github.com/shoto290" }
