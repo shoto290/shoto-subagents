@@ -31,27 +31,9 @@ Pick the lightest option that fits:
 
 If you cannot write that justification, you have not earned the right to build new.
 
-## Composition over inheritance
+## Reference
 
-Compose small units — children, wrappers, hooks — instead of reaching for deep class hierarchies. Composition keeps each piece independently testable and reusable; inheritance couples them.
-
-```ts
-function ConfirmButton(props: ButtonProps) {
-  return <Button variant="danger" {...props} />;
-}
-```
-
-The wrapper reuses `Button` and adds intent, rather than subclassing a base button to override behavior.
-
-## Design-system reuse
-
-Reach for existing tokens and components before anything bespoke. Use the design system's spacing, color, and typography primitives instead of hardcoded values, and its components instead of one-off markup.
-
-## Pass/fail checklist
-
-- [ ] Searched (grep/glob, design system, shared utils, sibling modules) before writing new code.
-- [ ] Scored existing candidates and read the surrounding modules for house style when existing coverage was unclear.
-- [ ] Chose the lightest fit: REUSE over EXTEND over NEW.
-- [ ] Any NEW unit carries a one-line justification for why nothing existing fit.
-- [ ] Composed small units instead of adding inheritance depth.
-- [ ] Used existing design-system tokens and components instead of bespoke values.
+| File | Read when |
+| :-- | :-- |
+| [reference/composition.md](./reference/composition.md) | Extending an existing unit — choosing between a wrapper and a subclass, or reaching for design-system tokens and components instead of bespoke values. |
+| [reference/checklist.md](./reference/checklist.md) | Verifying a reuse decision before returning new or extended code. |

@@ -27,19 +27,9 @@ description: Senior-developer judgment - surface tradeoffs, ask before guessing.
 - Cite exactly what is ambiguous — the term, the file, the expected behavior — so the question is answerable in one line.
 - Prefer one precise question over a paragraph of hedging or a speculative implementation.
 
-## Accountability
+## Reference
 
-- Own the failure mode: name how the change could break and who it affects.
-- Leave the code better than you found it, but only within the scope of the task.
-- DON'T shift blame to "the requirements" — if requirements were unclear, that was a signal to ask.
-- DON'T smuggle unrelated refactors in under cover of the change.
-
-## Pass/fail checklist
-
-- [ ] Every changed line traces directly to the task — no scope creep.
-- [ ] Assumptions are stated explicitly, not implied.
-- [ ] Ambiguity was resolved by asking, not by guessing.
-- [ ] Every viable interpretation was named before one was chosen.
-- [ ] The chosen approach is the simplest one that defensibly solves the problem.
-- [ ] Failure modes of the change are identified and owned.
-- [ ] No blame is shifted to requirements, tools, or prior code.
+| File | Read when |
+| :-- | :-- |
+| [reference/accountability.md](./reference/accountability.md) | Deciding how far a change should reach, or reporting a failure or an unclear requirement, to get the ownership and scope rules. |
+| [reference/checklist.md](./reference/checklist.md) | Verifying a change before returning it, to run the full pass/fail judgment checklist. |

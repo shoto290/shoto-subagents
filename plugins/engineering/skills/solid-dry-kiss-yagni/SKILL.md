@@ -9,60 +9,26 @@ The four principles that keep a design honest. Apply them to decide where bounda
 
 ## SOLID
 
-- **SRP — Single Responsibility.** A unit changes for one reason. If a class both formats a report and emails it, two unrelated requirements can break it.
+- **SRP — Single Responsibility.** A unit changes for one reason.
+- **OCP — Open/Closed.** Extend behavior without editing the dispatcher.
+- **LSP — Liskov Substitution.** A subtype must honor the base contract.
+- **ISP — Interface Segregation.** Depend on the narrow interface you use.
+- **DIP — Dependency Inversion.** Depend on abstractions, not concretions.
 
-```ts
-class Invoice { calculateTotal() {} }
-class InvoiceMailer { send(invoice: Invoice) {} }
-```
+## DRY, KISS, YAGNI
 
-- **OCP — Open/Closed.** Extend behavior without editing the dispatcher. Replace a growing `switch` with a strategy map.
-
-```ts
-const handlers: Record<Kind, (o: Order) => number> = { standard: std, express: exp };
-const fee = handlers[order.kind](order);
-```
-
-- **LSP — Liskov Substitution.** A subtype must honor the base contract. A `ReadOnlyList` that throws on `add()` is not substitutable for `List` — model it as a separate type, not a subclass.
-
-- **ISP — Interface Segregation.** Depend on the narrow interface you use. A consumer that only reads should take `{ get(id): T }`, not the full repository with writes and migrations.
-
-- **DIP — Dependency Inversion.** Depend on abstractions, not concretions. Take the interface as a constructor argument so the concrete client is injected, not imported.
-
-```ts
-class Notifier { constructor(private channel: Channel) {} }
-```
-
-## DRY
-
-DRY is about a single source of truth for **knowledge**, not about deleting code that merely looks alike. Two functions with the same shape but different reasons to change are coincidental duplication — collapsing them couples unrelated concepts. Extract only when the same decision lives in two places and must always move together. For the duplication threshold that gates extraction, see the Rule of Three in `engineering:avoid-over-engineering`.
-
-## KISS
-
-Pick the simplest thing that works and reject cleverness that buys nothing. A reader should understand the code on first pass; a dense one-liner that needs a comment to decode has already failed.
-
-```ts
-const isAdult = (age: number) => age >= 18;
-```
-
-This embodies the **S** in SIMPLE: less code, fewer abstractions, no machinery the problem did not ask for.
-
-## YAGNI
-
-Build for today's requirement, not an imagined one. Every speculative parameter, feature flag, or config knob is code you maintain, test, and explain for a caller that may never arrive — `engineering:avoid-over-engineering` carries the before/after example.
+- **DRY.** A single source of truth for knowledge, not for code that merely looks alike.
+- **KISS.** Pick the simplest thing that works and reject cleverness that buys nothing.
+- **YAGNI.** Build for today's requirement, not an imagined one — `engineering:avoid-over-engineering` carries the before/after example.
 
 ## When they conflict
 
-DRY and KISS pull against each other. Premature DRY is the more expensive mistake: a shared abstraction extracted too early hardens the wrong seam, and every later divergence fights the abstraction with flags and special cases. Prefer a little duplication over the wrong coupling — inline the repetition until the real shared knowledge is obvious, then extract once.
+Prefer a little duplication over the wrong coupling — inline the repetition until the real shared knowledge is obvious, then extract once.
 
-## Pass/fail checklist
+## Reference
 
-- **SRP** — Does this unit have exactly one reason to change?
-- **OCP** — Can I add a new variant without editing existing branching?
-- **LSP** — Can every subtype stand in for its base without surprising the caller?
-- **ISP** — Does each consumer depend only on the methods it calls?
-- **DIP** — Do high-level modules depend on interfaces, not concrete classes?
-- **DRY** — Is each piece of knowledge expressed in exactly one place?
-- **KISS** — Does this read correctly on a first pass, with no cleverness that needs decoding?
-- **YAGNI** — Does every parameter, flag, and branch serve a requirement that exists today?
-- **Abstraction** — Did I add an abstraction without a second real caller?
+| File | Read when |
+| :-- | :-- |
+| [reference/solid.md](./reference/solid.md) | You are placing a class or module boundary and want the worked code example for SRP, OCP, LSP, ISP, or DIP. |
+| [reference/dry-kiss-yagni.md](./reference/dry-kiss-yagni.md) | You are deduplicating code, simplifying an expression, or cutting a speculative knob, and need the full rationale plus the DRY-vs-KISS tiebreak. |
+| [reference/checklist.md](./reference/checklist.md) | You are about to return a design or diff and need to run the pass/fail checklist over it. |
