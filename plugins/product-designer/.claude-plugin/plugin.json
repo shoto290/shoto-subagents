@@ -1,7 +1,7 @@
 {
   "name": "product-designer",
   "description": "Product design plugin — ships the product-designer subagent: a discovery and definition specialist that is ULTRA-effective at user research, jobs-to-be-done, personas and journey maps, information architecture, prototyping and usability testing, UX writing, and outcome metrics. Bundles seven skills (user-research, jobs-to-be-done, personas-journeys, information-architecture, prototyping-validation, ux-writing, product-metrics) and exploits the Figma and Paper.design MCP servers. Sits upstream of the designer plugin, which owns visual craft and design systems. Requires the engineering plugin from the same marketplace — the agent preloads its craft skills.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "dependencies": ["engineering"],
   "mcpServers": "./.mcp.json",
   "author": { "name": "shoto290", "url": "https://github.com/shoto290" }
