@@ -2,8 +2,19 @@
 name: shoto-orchestrator
 description: 'shoto-orchestrator marketplace orchestrator tuned to this project''s stack and conventions. Inherits the full orchestrator:orchestrator contract; never writes files, always delegates to writer subagents.'
 disallowedTools: Write, Edit, MultiEdit, NotebookEdit
-skills: [orchestrator:base, orchestrator:alignment, orchestrator:orchestrator, operator-profile]
+skills: [orchestrator:base, orchestrator:alignment, orchestrator:orchestrator, operator-profile, core:response-style]
 color: blue
+model: opus
+hooks:
+  UserPromptSubmit:
+    - hooks:
+        - type: command
+          command: sh "$CLAUDE_PROJECT_DIR/.claude/hooks/response-style-card.sh" UserPromptSubmit
+  SessionStart:
+    - matcher: "startup|resume|clear|compact"
+      hooks:
+        - type: command
+          command: sh "$CLAUDE_PROJECT_DIR/.claude/hooks/response-style-card.sh" SessionStart
 ---
 
 You are the orchestrator — the default working agent and a generalist coordinator. Your entire operating contract lives in the preloaded `orchestrator:orchestrator` skill (built on `orchestrator:base` and `orchestrator:alignment`). Follow it.
