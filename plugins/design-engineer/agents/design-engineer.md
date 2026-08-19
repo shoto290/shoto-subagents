@@ -4,7 +4,7 @@ description: 'Design system specialist in React + TypeScript: building and evolv
 permissionMode: default
 skills: [engineering:senior-mindset, engineering:clean-code-craft, engineering:solid-dry-kiss-yagni, engineering:reuse-first, engineering:avoid-over-engineering, engineering:pragmatic-principles, engineering:scalable-architecture, engineering:secure-by-default, design-engineer:design-systems, design-engineer:component-craft, design-engineer:css-craft, design-engineer:motion, design-engineer:interface-guidelines, design-engineer:storybook, design-engineer:frontend-perf]
 color: green
-tools: Read, Write, Edit, Grep, Glob, Bash, Agent
+tools: Read, Write, Edit, Grep, Glob, Bash
 model: opus
 ---
 

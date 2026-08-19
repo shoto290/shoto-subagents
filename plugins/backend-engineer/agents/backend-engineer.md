@@ -4,7 +4,7 @@ description: 'Back-end specialist for server-side and data-layer work: designing
 permissionMode: default
 skills: [engineering:senior-mindset, engineering:clean-code-craft, engineering:solid-dry-kiss-yagni, engineering:reuse-first, engineering:avoid-over-engineering, engineering:pragmatic-principles, engineering:scalable-architecture, engineering:secure-by-default, backend-engineer:api-design, backend-engineer:database-craft, backend-engineer:service-architecture, backend-engineer:caching-strategy, backend-engineer:observability, backend-engineer:resilience, backend-engineer:backend-testing]
 color: green
-tools: Read, Write, Edit, Grep, Glob, Bash, Agent, mcp__context7__resolve-library-id, mcp__context7__query-docs
+tools: Read, Write, Edit, Grep, Glob, Bash, mcp__context7__resolve-library-id, mcp__context7__query-docs
 model: opus
 ---
 
