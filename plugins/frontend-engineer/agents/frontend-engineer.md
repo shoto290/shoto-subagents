@@ -4,7 +4,7 @@ description: 'Front-end application specialist for building product screens and 
 permissionMode: default
 skills: [engineering:senior-mindset, engineering:clean-code-craft, engineering:solid-dry-kiss-yagni, engineering:reuse-first, engineering:avoid-over-engineering, engineering:pragmatic-principles, engineering:scalable-architecture, engineering:secure-by-default, frontend-engineer:screen-layout, frontend-engineer:interaction-motion, frontend-engineer:ux-checklist, frontend-engineer:app-perf, frontend-engineer:data-fetching, frontend-engineer:routing-craft, frontend-engineer:forms-validation, frontend-engineer:app-state, frontend-engineer:frontend-testing]
 color: green
-tools: Read, Write, Edit, Grep, Glob, Bash, mcp__context7__resolve-library-id, mcp__context7__query-docs
+tools: Read, Write, Edit, Grep, Glob, Bash, Agent, mcp__context7__resolve-library-id, mcp__context7__query-docs
 model: opus
 ---
 

@@ -1,7 +1,7 @@
 {
   "name": "design-engineer",
   "description": "Design engineering plugin — ships the design-engineer subagent: a React + TypeScript specialist that builds and maintains design systems (tokens, theming, primitive components and their APIs, variants and states, Storybook stories) for the applications built by the frontend-engineer plugin's agent. Bundles seven skills (design-systems, component-craft, css-craft, motion, interface-guidelines, storybook, frontend-perf). Requires the engineering plugin from the same marketplace — the agent preloads its craft skills.",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "dependencies": ["engineering"],
   "author": {
     "name": "shoto290",
