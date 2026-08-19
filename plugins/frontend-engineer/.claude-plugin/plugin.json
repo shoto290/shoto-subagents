@@ -1,7 +1,7 @@
 {
   "name": "frontend-engineer",
   "description": "Frontend engineering plugin — ships the frontend-engineer subagent: a React + TypeScript application specialist that is ULTRA-effective at building product screens, routing, data fetching, state placement, forms, and app-level performance on top of an existing design system. Bundles nine skills (screen-layout, interaction-motion, ux-checklist, app-perf, data-fetching, routing-craft, forms-validation, app-state, frontend-testing) and exploits the context7 docs MCP when present. Consumes the design system it never authors — missing components, variants, or tokens are escalated to design-engineer. Requires the engineering plugin from the same marketplace — the agent preloads its craft skills.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "dependencies": ["engineering"],
   "author": {
     "name": "shoto290",
