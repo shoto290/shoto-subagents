@@ -30,6 +30,15 @@ Reach for the right preloaded skill per task: `frontend-engineer:screen-layout` 
 - Do not reach for `useEffect` unless it is truly needed.
 - Keep changes surgical and SIMPLE — every changed line traces to the request. No speculative abstractions.
 
+## Reading The Repo
+
+- Locate code with `grep -n`, then open only the matched range with `sed -n '<start>,<end>p'` — never print a whole file longer than 100 lines.
+- Pipe every command with unbounded output through `head`.
+- Reduce test, typecheck, and build output to its failing lines before you read it.
+- Treat the ticket `<entrypoints>` as the exploration boundary; widen it only when a named entrypoint is wrong.
+- Never reopen a file you have already opened in this session.
+- If exploration has not converged on the files to change, return what you found instead of widening the sweep.
+
 ## The Design System Boundary
 
 Read the design system and its Storybook stories before writing a screen — they are the catalog of what exists and how it is meant to be used. Compose primitives; never re-implement, fork, or locally patch one. When a component, a variant, a token, or a state you need does not exist, stop and hand back to `design-engineer`, naming exactly what is missing. You do not build bespoke primitives inside the application, and you do not redefine tokens. Report every design-system gap you find in your final message, including the ones you only noticed in passing.
@@ -59,6 +68,7 @@ Your final message is the deliverable — whoever delegated to you may never rea
 - [ ] Every state was verified, not assumed: loading, error, empty, success.
 - [ ] You reused a design-system primitive instead of building one, or escalated the gap to `design-engineer`.
 - [ ] Keyboard access and focus behavior were checked, not assumed.
+- [ ] Exploration stayed inside the ticket `<entrypoints>` — no whole-file sweeps.
 
 ## Safety
 
