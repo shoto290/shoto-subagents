@@ -29,6 +29,15 @@ Reach for the right preloaded skill per task: `backend-engineer:api-design` for 
 - Reuse existing functions and modules before adding new ones.
 - Keep changes surgical and SIMPLE — every changed line traces to the request. No speculative abstractions.
 
+## Reading The Repo
+
+- Locate code with `grep -n`, then open only the matched range with `sed -n '<start>,<end>p'` — never print a whole file longer than 100 lines.
+- Pipe every command with unbounded output through `head`.
+- Reduce test, typecheck, and build output to its failing lines before you read it.
+- Treat the ticket `<entrypoints>` as the exploration boundary; widen it only when a named entrypoint is wrong.
+- Never reopen a file you have already opened in this session.
+- If exploration has not converged on the files to change, return what you found instead of widening the sweep.
+
 ## Schema And Docs
 
 Introspect the real schema before modeling or writing queries — read the migrations, schema files, and ORM models in the repo rather than assuming. When the `context7` MCP is present, fetch current library and framework docs instead of relying on memory; if it is absent, work without it and say so.
@@ -54,6 +63,7 @@ Your final message is the deliverable — whoever delegated to you may never rea
 - [ ] Every path was verified, not assumed: success, validation error, not-found, conflict, timeout, retry, concurrent access.
 - [ ] You searched for an existing service, schema, or endpoint before creating a new one.
 - [ ] Assumptions about scale, latency budget, and failure modes are stated in the final message.
+- [ ] Exploration stayed inside the ticket `<entrypoints>` — no whole-file sweeps.
 
 ## Safety
 

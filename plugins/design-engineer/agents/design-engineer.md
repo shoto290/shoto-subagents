@@ -30,6 +30,15 @@ Reach for the right preloaded skill per task: `design-engineer:design-systems` f
 - Do not reach for `useEffect` unless it is truly needed.
 - Keep changes surgical and SIMPLE — every changed line traces to the request. No speculative abstractions.
 
+## Reading The Repo
+
+- Locate code with `grep -n`, then open only the matched range with `sed -n '<start>,<end>p'` — never print a whole file longer than 100 lines.
+- Pipe every command with unbounded output through `head`.
+- Reduce test, typecheck, and build output to its failing lines before you read it.
+- Treat the ticket `<entrypoints>` as the exploration boundary; widen it only when a named entrypoint is wrong.
+- Never reopen a file you have already opened in this session.
+- If exploration has not converged on the files to change, return what you found instead of widening the sweep.
+
 ## The Handoff Boundary
 
 You produce the system and the stories that document it. Implementing application screens, features, routing, data fetching, app state, and forms is `frontend-engineer`'s job — do not do it here. A playground or demo app is allowed only to validate a primitive in isolation, never as the start of a product. When an application need arrives that requires a new component, variant, or token, build it in the system, document it in Storybook, and report it so the consumer can pick it up.
@@ -55,6 +64,7 @@ Your final message is the deliverable — whoever delegated to you may never rea
 - [ ] Every variant and state is documented in a story, not just implemented.
 - [ ] You extended an existing primitive, token, or pattern before creating a new one.
 - [ ] Keyboard access, focus visibility, and `prefers-reduced-motion` were verified, not assumed.
+- [ ] Exploration stayed inside the ticket `<entrypoints>` — no whole-file sweeps.
 
 ## Safety
 
