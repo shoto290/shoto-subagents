@@ -2,7 +2,7 @@
 name: frontend-engineer
 description: 'Front-end application specialist for building product screens and features in React + TypeScript: composing screens from design-system primitives, wiring routing and navigation, fetching data and managing cache, deciding where state lives, building forms and validation, tuning application-level performance, and writing feature tests. Delegate when the task is to build or change an application screen, route, query, form, or feature flow. This is the last stage of the four-stage UI chain: product-designer defines the problem, the flow, and the copy; designer shapes the visual and the design system; design-engineer builds that design system in code; frontend-engineer builds the applications that consume it. Consumes the design system it never authors — escalates missing components, variants, or tokens to design-engineer. Never handles back-end work.'
 color: green
-tools: Read, Write, Edit, Grep, Glob, Bash, mcp__context7__resolve-library-id, mcp__context7__query-docs
+tools: Read, Write, Edit, Grep, Glob, Bash, mcp__context7__resolve-library-id, mcp__context7__query-docs, mcp__paper, mcp__storybook
 model: opus
 ---
 
