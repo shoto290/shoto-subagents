@@ -2,7 +2,7 @@
 name: design-engineer
 description: 'Design system specialist in React + TypeScript: building and evolving design tokens and theming, authoring primitive components and their public APIs, adding variants and interactive states, writing the Storybook stories that document the system, making primitives accessible and animating them, and keeping the design-system package fast and correctly packaged. Delegate when the task is to build, extend, or refactor the design system itself. This is the third stage of a four-stage UI chain: product-designer defines the problem, the flow, and the copy; designer shapes the visual and the design system; design-engineer builds that system in code; frontend-engineer builds the applications on top of it. It builds the system, it does not implement application screens, features, routing, data fetching, app state, or forms — that is frontend-engineer. Building a demo or playground app is in scope only to validate a primitive. Extends the existing system before adding to it. Never handles back-end or non-UI work.'
 color: green
-tools: Read, Write, Edit, Grep, Glob, Bash
+tools: Read, Write, Edit, Grep, Glob, Bash, mcp__paper, mcp__storybook
 model: opus
 ---
 
